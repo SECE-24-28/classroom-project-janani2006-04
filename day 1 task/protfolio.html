@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Janani M — Portfolio</title>
+  <meta name="description" content="Portfolio of Janani M — B.Tech student. Projects, skills, resume and contact." />
+  <style>
+    /* ---------- VARIABLES & RESET ---------- */
+    :root{
+      --bg:#f6fbf6;
+      --card:#ffffff;
+      --muted:#6b785f;
+      --accent:#93c572; /* pistachio */
+      --accent-dark:#6ba154;
+      --glass:rgba(0,0,0,0.04);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#152512;background:var(--bg)}
+    a{color:var(--accent-dark);text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* ---------- LAYOUT ---------- */
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;gap:18px;padding:12px 0}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{
+      width:74px;height:74px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;box-shadow:0 6px 18px rgba(15,45,10,0.08)
+    }
+    h1{margin:0;font-size:24px}
+    .subtitle{color:var(--muted);font-size:14px;margin-top:6px}
+
+    /* top grid */
+    .top-grid{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:18px}
+    @media(max-width:920px){.top-grid{grid-template-columns:1fr;}.right{order:2}}
+
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(6,20,6,0.04)}
+    .right .card{position:sticky;top:18px}
+
+    /* contact */
+    .contact p{margin:8px 0;color:var(--muted);font-size:14px}
+    .contact a{color:var(--accent-dark)}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .badge{background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:13px}
+
+    /* about */
+    .about p{color:#2a3a2a;line-height:1.65;margin-bottom:12px}
+    .section-title{font-size:18px;color:var(--accent-dark);margin-bottom:10px}
+
+    /* projects */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(147,197,114,0.06),transparent);border:1px solid rgba(107,119,95,0.06)}
+    .project h3{margin:0 0 8px 0}
+
+    /* skills & certs */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:560px){.two-col{grid-template-columns:1fr}}
+
+    ul{padding-left:18px;color:var(--muted)}
+
+    /* footer */
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px;padding:12px 0}
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .btn{
+      display:inline-block;padding:8px 12px;background:var(--accent);color:#053; border-radius:8px;font-weight:700;text-decoration:none;
+      box-shadow:0 6px 14px rgba(99,156,89,0.12)
+    }
+    .links{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+    code{background:#f2faf2;padding:2px 6px;border-radius:6px;color:#2b4a2b;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">
+        <div class="logo">JM</div>
+        <div>
+          <h1>Janani M</h1>
+          <div class="subtitle">B.Tech · Aspiring AI/ML · DSA & C++ enthusiast</div>
+        </div>
+      </div>
+
+      <div style="margin-left:auto;display:flex;gap:10px;align-items:center">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn" style="background:#60a5fa;color:#042" href="mailto:janani.m2024aiml@sece.ac.in">Email</a>
+      </div>
+    </header>
+
+    <div class="top-grid">
+      <!-- LEFT MAIN -->
+      <main class="left">
+        <section class="card about">
+          <div class="section-title">About Me</div>
+          <p>Hello — I'm <strong>Janani M</strong>, a dedicated B.Tech student focused on data structures, algorithms, and building practical AI-based projects. I prefer short, focused learning sessions and love turning ideas into prototypes. My goal is to strengthen my DSA & C++ skills and build real-time projects that solve real problems.</p>
+          <p>I enjoy full-stack fundamentals, data analytics using Power BI, and applying algorithms to real tasks. Outside coding, I'm passionate about designing simple UIs and learning system design basics.</p>
+        </section>
+
+        <section id="projects" class="card" style="margin-top:14px">
+          <div class="section-title">Projects</div>
+
+          <div class="projects">
+            <div class="project">
+              <h3>Password Manager (Python)</h3>
+              <p class="muted">A secure CLI-based password manager that encrypts stored credentials using standard cryptography libraries. Supports create/read/update/delete and exports encrypted backups.</p>
+              <p><strong>Tech:</strong> Python, cryptography, file storage</p>
+            </div>
+
+            <div class="project">
+              <h3>Weather Data Logger (C++)</h3>
+              <p class="muted">A C++ console program for logging weather data (temperature, humidity, condition). Supports manual entries and saves logs as CSV for analysis.</p>
+              <p><strong>Tech:</strong> C++, file I/O, CSV</p>
+            </div>
+
+            <div class="project">
+              <h3>DSA Practice Repository</h3>
+              <p class="muted">Curated solutions and notes for common DS & Algo problems — ideal for interview prep and classroom exams.</p>
+              <p><strong>Tech:</strong> C++, problem-solving, GitHub</p>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:14px">
+          <div class="section-title">Coding Profiles</div>
+          <div class="links">
+            <div><strong>LeetCode:</strong> Janani M</div>
+            <div><strong>SkillRack:</strong> Janani M</div>
+            <div><strong>CodeChef:</strong> Janani M</div>
+            <div><strong>HackerRank:</strong> Janani M</div>
+            <div class="muted" style="font-size:13px;margin-top:6px">(Add links to each profile by editing this file)</div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:14px">
+          <div class="section-title">Certificates & Achievements</div>
+          <ul>
+            <li>Certificate in C Programming for Beginners & Mastering the C Language — Udemy (2024)</li>
+            <li>Certificate in Data Analytics using PowerBI — Newton School (2025)</li>
+            <li>Certificate in Master Data Structures & Algorithms using C++ & C — Udemy (2025)</li>
+          </ul>
+        </section>
+
+      </main>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside class="right">
+        <div class="card contact">
+          <div class="section-title">Contact</div>
+          <p><strong>Phone:</strong> <a href="tel:+918838405012">8838405012</a></p>
+          <p><strong>Email:</strong> <a href="mailto:janani.m2024aiml@sece.ac.in">janani.m2024aiml@sece.ac.in</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/janani2006-20" target="_blank" rel="noopener">janani2006-20</a></p>
+          <p><strong>LinkedIn:</strong> Janani M</p>
+
+          <div style="margin-top:12px">
+            <a class="btn" href="https://github.com/janani2006-20" target="_blank">View GitHub</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="section-title">Technical Skills</div>
+          <div class="badges">
+            <div class="badge">C</div>
+            <div class="badge">Python</div>
+            <div class="badge">C++</div>
+            <div class="badge">HTML</div>
+            <div class="badge">CSS</div>
+            <div class="badge">JavaScript</div>
+            <div class="badge">MySQL</div>
+            <div class="badge">MongoDB</div>
+            <div class="badge">DSA</div>
+            <div class="badge">OOP</div>
+            <div class="badge">PowerBI</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="section-title">Tools & Web</div>
+          <p class="muted">VSCode · GitHub · Canva · Figma · Wordpress · Excel · PowerPoint</p>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div>Made with ❤️ • Janani M • <code>janani.m2024aiml@sece.ac.in</code></div>
+    </footer>
+
+  </div>
+</body>
+</html>
