@@ -1,0 +1,130 @@
+/* Theme colors */
+:root {
+    --pistachio: #93c572;
+    --dark-green: #6ba154;
+    --light-bg: #eef8f1;
+}
+
+/* General */
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background: var(--light-bg);
+}
+
+header {
+    background: var(--pistachio);
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px #b8dab0;
+}
+
+footer {
+    background: var(--pistachio);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+}
+
+/* About Page */
+.about-page {
+    max-width: 850px;
+    margin: 35px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    line-height: 1.7;
+    box-shadow: 0 0 12px #b7ddb0;
+}
+
+.about-page h2 {
+    text-align: center;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: var(--dark-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #4e7c3b;
+}
+
+/* Login Page */
+.login-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.login-box {
+    width: 330px;
+    background: white;
+    padding: 22px;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #beddb0;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 11px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--dark-green);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: #4e7c3b;
+}
+
+/* Menu Page */
+.menu-page {
+    text-align: center;
+    padding: 30px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    background: white;
+    padding: 12px;
+    margin: 10px auto;
+    width: 260px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #cfe8c5;
+}
+
+/* Animations */
+.fade {
+    animation: fadeIn 1.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
